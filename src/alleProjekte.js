@@ -4,6 +4,8 @@ import {Route, Link} from "react-router-dom";
 import Top_menue from './components/navigation/top_menue'
 import F from './components/navigation/FooterComp'
 
+import VogemannLogo from './assets/images/VogemannLogo.png'
+import VogemannTitle from './assets/images/VogemannImg.png'
 
 
 
@@ -15,17 +17,21 @@ import FinanceImg from './assets/images/Finance.png'
 import ProjektComponentBox from './components/projekte/ProjektComponentBox'
 import Footer from './components/Footer';
 
+import Mobile_menue from './mobile_components/moble_menue';
+import Mobile_Footer from './mobile_components/Mobile_Footer'
 
-
-
-
+import Mobile_alle_Projekte_projekt from './mobile_components/Mobile_alle_Projekte_projekt';
+ 
+import Filtertrigger from './assets/images/filtertrigger.png'
 
 
 function alleProjekte() {
   return (
     
     <div >
-  
+      
+      <div id="Desktop_Wrapper">
+
 
         <Top_menue />
 
@@ -242,6 +248,41 @@ function alleProjekte() {
 
 
         <Footer/>
+        </div>
+
+      <div id="Mobile_Wrapper">
+        
+
+      <Mobile_menue/>
+
+      <div id="Mobile_alle_Projekte_Wrapper">
+
+          <div id="Mobile_alle_Projekte_Filter_ausklappen">
+            <h3 id="Mobile_alle_Projekte_h3">
+              Filter ausklapen
+            </h3>
+
+            <div id="Mobile_alle_Projekte_ausklappen_trigger">
+              <img src={Filtertrigger} id="Mobile_alle_Projekte_trigger_img"/>
+            </div>
+
+          </div>
+
+          <div id="Mobile_alle_Projekte_Projekte_wrapper">
+            <Mobile_alle_Projekte_projekt logo={VogemannLogo} titleimg={VogemannTitle} title="Vogemann" Kategorie={Schiffahrtimg} Typ="Fremdkapital" Volumen="100.000.000$" Rendite="5%" />
+          </div>
+
+
+
+               
+      </div>
+
+        
+        
+
+
+          <Mobile_Footer/>
+      </div>
 
 
 

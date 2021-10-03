@@ -8,7 +8,8 @@ function mobile_home_projekt(props) {
 
           <div id="mobile_home_projekt_wrapper">
 
-              <div id="mobile_home_projekt_top">
+              <div id="mobile_home_projekt_top">  
+                            <img src={props.titleImg} id="mobile_home_projekt_top_title_img"/>
 
                 <div id="mobile_home_projekt_top_top">
 
@@ -18,10 +19,14 @@ function mobile_home_projekt(props) {
 
 
                 </div>
-                  <img src={props.Logo} id="mobile_home_projekt_top_logo"/>
+                  <div id="mobile_home_projekt_top_logo_WRAPPER">
+                    
+                      <img src={props.Logo} id="mobile_home_projekt_top_logo"/>
+
+                  </div>
 
                     <div id="mobile_home_projekt_übergang">
-
+                        
                    </div>
               </div>
 

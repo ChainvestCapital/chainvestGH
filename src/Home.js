@@ -43,6 +43,7 @@ import Mobile_home_projekt from './mobile_components/mobile_home_projekt'
 import moble_menue from './mobile_components/moble_menue'
 import mobile_footer from './mobile_components/Mobile_Footer'
 
+import Mobile_menue from './mobile_components/moble_menue'
 
 function Home() {
   return (
@@ -137,7 +138,7 @@ Als Informationsplattform für Security Token informiert BLOCKCAP rund um die F
 
         <div id="Mobile_Wrapper">
 
-
+            <Mobile_menue/>
             <div id="mobile_home_top_section">
 
                 <div id="mobile_home_top_text">
@@ -193,14 +194,17 @@ Als Informationsplattform für Security Token informiert BLOCKCAP rund um die F
 
             </div>
 
+
+
             <div id="home_mobile_projekte_section">
 
                 <div id="home_mobile_projekte_wrapper">
-                    <Mobile_home_projekt Rendite="12%" Volumen="100.000.000$" Typ="Fremdkapital" Kategorie={Schiffahrtimg} Logo={VogemannLogo}  />
-                    <Mobile_home_projekt Rendite="12%" Volumen="100.000.000$" Typ="Fremdkapital" Kategorie={Schiffahrtimg} Logo={VogemannLogo}  />
-                    <Mobile_home_projekt Rendite="12%" Volumen="100.000.000$" Typ="Fremdkapital" Kategorie={Schiffahrtimg} Logo={VogemannLogo}  />
+                    <Mobile_home_projekt Rendite="12%" Volumen="100.000.000$" Typ="Fremdkapital" Kategorie={Schiffahrtimg} Logo={VogemannLogo} titleImg={VogemannTitle} />
+                    <Mobile_home_projekt Rendite="12%" Volumen="100.000.000$" Typ="Fremdkapital" Kategorie={Schiffahrtimg} Logo={VogemannLogo} titleImg={VogemannTitle} />
+                    <Mobile_home_projekt Rendite="12%" Volumen="100.000.000$" Typ="Fremdkapital" Kategorie={Schiffahrtimg} Logo={VogemannLogo} titleImg={VogemannTitle} />
+                    <Link to="./alleProjekte"> 
 
-                    <div id="home_mobile_projekte_alle_wrapper">
+                     <div id="home_mobile_projekte_alle_wrapper">
                         <div id="home_mobile_projekte_alle_ecclipse">
                             <img src={ProjekteImg} id="home_mobile_projekte_alle_img"/>
                         </div>
@@ -208,7 +212,10 @@ Als Informationsplattform für Security Token informiert BLOCKCAP rund um die F
                         <h3 id="home_mobile_projekte_alle_h3">
                             Alle Projekte ansehen
                         </h3>
-                    </div>
+                      </div>
+                    </Link>
+                     
+                    
                 
                 </div>
 
