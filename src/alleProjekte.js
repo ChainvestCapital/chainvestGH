@@ -24,8 +24,31 @@ import Mobile_alle_Projekte_projekt from './mobile_components/Mobile_alle_Projek
  
 import Filtertrigger from './assets/images/filtertrigger.png'
 
+import FilterMenue from './mobile_components/FilterMenue'
+import Filterausklappen from './mobile_components/mobile_filter_top'
+import { useState } from 'react';
 
-function alleProjekte() {
+
+
+
+function AlleProjekte() {
+
+  function filterausklappen() {
+    setFilterMenueshow(true)
+    setFiltereinklappenshow(false);
+    
+  }
+
+  function filtereinklappen() {
+    setFilterMenueshow(false)
+    setFiltereinklappenshow(true);
+  }
+
+
+  const[FilterMenueshow,setFilterMenueshow]=useState(false)
+
+  const[Filtereinklappenshow,setFiltereinklappenshow]=useState(true)
+
   return (
     
     <div >
@@ -256,20 +279,23 @@ function alleProjekte() {
       <Mobile_menue/>
 
       <div id="Mobile_alle_Projekte_Wrapper">
+      <div onClick={()=>filtereinklappen() }>
+              <FilterMenue trigger={FilterMenueshow} setTrigger={setFilterMenueshow} />
+      </div>
+     
+      <div  onClick={()=>filterausklappen()}>
+        <Filterausklappen trigger={Filtereinklappenshow} setTrigger={setFiltereinklappenshow}
+        />
+      </div>
+      
 
-          <div id="Mobile_alle_Projekte_Filter_ausklappen">
-            <h3 id="Mobile_alle_Projekte_h3">
-              Filter ausklapen
-            </h3>
 
-            <div id="Mobile_alle_Projekte_ausklappen_trigger">
-              <img src={Filtertrigger} id="Mobile_alle_Projekte_trigger_img"/>
-            </div>
-
-          </div>
+          
 
           <div id="Mobile_alle_Projekte_Projekte_wrapper">
-            <Mobile_alle_Projekte_projekt logo={VogemannLogo} titleimg={VogemannTitle} title="Vogemann" Kategorie={Schiffahrtimg} Typ="Fremdkapital" Volumen="100.000.000$" Rendite="5%" />
+          <Mobile_alle_Projekte_projekt logo={VogemannLogo} titleimg={VogemannTitle} title="Vogemann" Kategorie={Schiffahrtimg} Typ="Fremdkapital" Volumen="100.000.000$" Rendite="5%" />
+          <Mobile_alle_Projekte_projekt logo={VogemannLogo} titleimg={VogemannTitle} title="Vogemann" Kategorie={Schiffahrtimg} Typ="Fremdkapital" Volumen="100.000.000$" Rendite="5%" />
+          <Mobile_alle_Projekte_projekt logo={VogemannLogo} titleimg={VogemannTitle} title="Vogemann" Kategorie={Schiffahrtimg} Typ="Fremdkapital" Volumen="100.000.000$" Rendite="5%" />
           </div>
 
 
@@ -293,4 +319,4 @@ function alleProjekte() {
   );
 }
 
-export default alleProjekte;
+export default AlleProjekte;

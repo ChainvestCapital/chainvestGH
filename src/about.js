@@ -15,6 +15,10 @@ import logo from './assets/images/logo.png'
 import Footer from './components/Footer';
 
 
+import Mobile_menue from './mobile_components/moble_menue';
+import Mobile_Footer from './mobile_components/Mobile_Footer'
+
+import mobile_about from './assets/images/mobile_about.png'
 
 
 function about() {
@@ -22,6 +26,9 @@ function about() {
     
     <div >
 
+          <div id="Desktop_Wrapper">
+
+          
           <Top_menue />
 
           <div id="about_top_section">
@@ -163,6 +170,104 @@ Bei BLOCKCAP sind wir von der Innovationskraft blockchain-basierter Finanzinstru
 
           </div>
           <Footer/>
+          </div>
+
+
+          <div id="mobile_Wrapper">
+
+            <Mobile_menue/>
+
+              <div id="mobile_about_top">
+
+                <div id="mobile_about_top_bg">
+                  <img src={mobile_about} id ="mobile_about_top_bg_IMG"/>
+                </div>
+
+                <div id="mobile_about_top_Content">
+                  <h3 id="mobile_about_top_h3">
+                  Connecting ideas and capital
+                  </h3>
+                  <div id="mobile_about_top_h_row">
+                    <h2 id="mobile_about_top_h2">
+                      We are
+                    </h2>
+                    <h2 id="mobile_about_top_h2_blue">
+                      Chainvest
+                    </h2>
+                  </div>
+
+                  <h5 id="mobile_about_top_h5">
+                  Mit unserer Plattform schaffen wir einen Rahmen, in dem Unternehmen und InvestorInnen sich zum Zweck des Kapitalaustauschs treffen und mehr Transparenz und Investitionssicherheit gewährleistet wird. So stärken wir das Vertrauen in eine dezentrale Kapitalaufnahme und fördern das Wachstum von blockchain-basierten Finanzinstrumenten.
+                  </h5>
+          
+                </div>
+
+
+
+
+
+
+              </div>
+
+              <div id="mobile_about_we">
+                <div id="mobile_about_we_row1">
+                  <div id="mobile_about_we_img_wrapper">
+                    <img src={Lu_Img} id="mobile_about_we_img" />
+                  </div>
+
+                  <div id="mobile_about_we_content_spalte">
+                    <h2 id="mobile_about_we_h2">
+                      Lu-Mieke Ellen
+                    </h2>
+
+                    <h3 id="mobile_about_we_3">
+                      Co-Founder
+                    </h3>
+
+                    <h4 id="mobile_about_we_h4">
+                    Mit unserer Plattform schaffen wir einen Rahmen, in dem Unternehmen und InvestorInnen sich zum Zweck des Kapitalaustauschs treffen und mehr Transparenz und Investitionssicherheit gewährleistet wird
+                    </h4>
+                  </div>
+
+                  <div id="mobile_about_we_kontakt">
+
+                  </div>
+                </div>
+
+
+                <div id="mobile_about_we_row2">
+                  
+
+                  <div id="mobile_about_we_content_spalte">
+                    <h2 id="mobile_about_we_h2">
+                      Tim Zölitz
+                    </h2>
+
+                    <h3 id="mobile_about_we_3">
+                      Co-Founder
+                    </h3>
+
+                    <h4 id="mobile_about_we_h4">
+                    Mit unserer Plattform schaffen wir einen Rahmen, in dem Unternehmen und InvestorInnen sich zum Zweck des Kapitalaustauschs treffen und mehr Transparenz und Investitionssicherheit gewährleistet wird
+                    </h4>
+                  </div>
+                      <div id="mobile_about_we_img_wrapper">
+                         <img src={Zoel_Img} id="mobile_about_we_img" />
+                      </div>
+                  <div id="mobile_about_we_kontakt">
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+            <Mobile_Footer/>
+
+          </div>
     </div>
 
   );

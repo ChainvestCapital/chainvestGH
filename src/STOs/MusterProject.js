@@ -45,8 +45,16 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 
 import Footer from '../components/Footer'
+import Mobile_menue from '../mobile_components/moble_menue'
+import Mobile_Überblick from './Frames/Mobile_Überblick'
+import Mobile_Unternehmen from './Frames/Mobile_Unternehmen'
+import Mobile_TokenSale from './Frames/Mobile_TokenSale'
+import Mobile_Dokumente from './Frames/Mobile_Dokumente'
+import Mobile_Token from './Frames/Mobile_Token'
+import Mobile_Risiko from './Frames/Mobile_Risko'
 
 
+import Mobile_Footer from '../mobile_components/Mobile_Footer'
 
 
 function MusterProject() {
@@ -177,9 +185,88 @@ function MusterProject() {
 const bgcolor= "#CDF0EA";
 
 
+const [showMobile_Überblick,setshowMobile_Überblick]=useState(true)
+const [showMobile_Unternehmen,setshowMobile_Unternehmen]=useState(false)
+const [showTokenSale,setshowTokenSale]=useState(false)
+const [showDokumente,setshowDokumente]=useState(false)
+const [showToken,setshowToken]=useState(false)
+const [showRisiko,setshowRisiko]=useState(false)
 
 
+const [CurrentPage, setCurrentPage] = useState("Überblick")
 
+    function fshowMobile_Überblick () {
+        
+        setshowMobile_Überblick(true)
+        setshowMobile_Unternehmen(false)
+        setshowTokenSale(false)
+        setshowDokumente(false)
+        setshowToken(false)
+        setshowRisiko(false)
+        setCurrentPage("Überblick")
+
+    }
+
+    function fshowMobile_Unternehmen () {
+        setshowMobile_Überblick(false)
+        setshowMobile_Unternehmen(true)
+        setshowTokenSale(false)
+        setshowDokumente(false)
+        setshowToken(false)
+        setshowRisiko(false)
+        setCurrentPage("Unternehmen")
+
+
+        
+    }
+    function fshowMobile_TokenSale () {
+        setshowMobile_Überblick(false)
+        setshowMobile_Unternehmen(false)
+        setshowTokenSale(true)
+        setshowDokumente(false)
+        setshowToken(false)
+        setshowRisiko(false)
+        setCurrentPage("TokenSale")
+
+
+        
+    }
+    function fshowMobile_Dokumente () {
+        setshowMobile_Überblick(false)
+        setshowMobile_Unternehmen(false)
+        setshowTokenSale(false)
+        setshowDokumente(true)
+        setshowToken(false)
+        setshowRisiko(false)
+        setCurrentPage("Dokumente")
+
+
+        
+    }
+    function fshowMobile_Token () {
+
+        setshowMobile_Überblick(false)
+        setshowMobile_Unternehmen(false)
+        setshowTokenSale(false)
+        setshowDokumente(false)
+        setshowToken(true)
+        setshowRisiko(false)
+        setCurrentPage("Token")
+
+        
+    }
+    function fshowMobile_Risiko () {
+
+        setshowMobile_Überblick(false)
+        setshowMobile_Unternehmen(false)
+        setshowTokenSale(false)
+        setshowDokumente(false)
+        setshowToken(false)
+        setshowRisiko(true)
+        setCurrentPage("Risko")
+
+        
+    }
 
 
 
@@ -187,6 +274,9 @@ const bgcolor= "#CDF0EA";
     return (
       
       <div >
+
+          <div id="Desktop_Wrapper">
+
         <Top_menue />
 
 
@@ -299,6 +389,143 @@ const bgcolor= "#CDF0EA";
 
 
         <Footer/>
+        </div>
+        
+
+        <div id="Mobile_Wrapper">
+       <Mobile_menue/>
+       
+
+            <div id="Mobile_musterProjekt_Wrapper">
+
+                <div id="Mobile_musterProjekt_topMenue">
+                    
+
+                    <div
+                    onClick={() => fshowMobile_Überblick()}
+                    id="Mobile_musterProjekt_topMenue_row">
+                        <img src={Home} id="Mobile_musterProjekt_topMenue_IMG"/>
+
+                        <h3 id="Mobile_musterProjekt_topMenue_h3">
+                            Überblick
+                        </h3>
+                    </div>
+
+                    <div 
+                    onClick={() => fshowMobile_Unternehmen()}
+
+                    id="Mobile_musterProjekt_topMenue_row">
+                        <img src={Unternehmen} id="Mobile_musterProjekt_topMenue_IMG"/>
+
+                        <h3 id="Mobile_musterProjekt_topMenue_h3">
+                            Unternhemen
+                        </h3>
+                    </div>
+
+                    <div
+                    onClick={() => fshowMobile_TokenSale()}
+                    
+                    id="Mobile_musterProjekt_topMenue_row">
+                        <img src={TokenSale} id="Mobile_musterProjekt_topMenue_IMG"/>
+
+                        <h3 id="Mobile_musterProjekt_topMenue_h3">
+                            Token Sale
+                        </h3>
+                    </div>
+
+                    <div
+                    onClick={() => fshowMobile_Dokumente()}       
+                    id="Mobile_musterProjekt_topMenue_row">
+                        <img src={Dokumente} id="Mobile_musterProjekt_topMenue_IMG"/>
+
+                        <h3 id="Mobile_musterProjekt_topMenue_h3">
+                            Dokumente
+                        </h3>
+                    </div>
+
+                    <div 
+                    onClick={() => fshowMobile_Token()}
+
+                    id="Mobile_musterProjekt_topMenue_row">
+                        <img src={Token} id="Mobile_musterProjekt_topMenue_IMG"/>
+
+                        <h3 id="Mobile_musterProjekt_topMenue_h3">
+                            Token
+                        </h3>
+                    </div>
+
+                    <div
+                    onClick={() => fshowMobile_Risiko()}
+                    
+                    id="Mobile_musterProjekt_topMenue_row">
+                        <img src={Risiko} id="Mobile_musterProjekt_topMenue_IMG"/>
+
+                        <h3 id="Mobile_musterProjekt_topMenue_h3">
+                            Risko
+                        </h3>
+                    </div>
+                </div>
+
+
+
+
+                <div id="Mobile_musterProjekt_zumProjekt_Wrapper">
+                    <h3 id="Mobile_musterProjekt_zumProjekt_h3">
+                        {CurrentPage}
+                    </h3>
+
+                    <div id="Mobile_musterProjekt_zumProjekt_right_Wrapper">
+                        <img src={BitbondImg} id="Mobile_musterProjekt_zumProjekt_right_Img"/>
+                        <img src={BitbondLogo} id="Mobile_musterProjekt_zumProjekt_right_Logo"/>
+                        <div id="Mobile_musterProjekt_zumProjekt_right_right">
+                            <img src={arrow} id="Mobile_musterProjekt_zumProjekt_right_right_img"/>
+                        </div>
+                    
+                    
+                    </div>
+                </div>
+
+                
+
+                   
+
+
+
+
+
+                <div id="Mobile_musterProjekt_Frame_Wrapper">
+                    <Mobile_Überblick 
+                    trigger={showMobile_Überblick} setTrigger={setshowMobile_Überblick}
+                    Rendite="4%" Volumen="100.00.00$" Typ="Schuldverschreibung" Mindestinvestition="1€" />
+
+                    <Mobile_Unternehmen 
+                    trigger={showMobile_Unternehmen} setTrigger={setshowMobile_Unternehmen}
+                    />
+
+                    <Mobile_TokenSale
+                    trigger={showTokenSale} setTrigger={setshowTokenSale}
+                        
+                    />
+                    <Mobile_Dokumente 
+                    trigger={showDokumente} setTrigger={setshowDokumente}
+                    
+                    />
+                    <Mobile_Token
+                    trigger={showToken} setTrigger={setshowToken}
+
+                    />
+                    <Mobile_Risiko
+                    trigger={showRisiko} setTrigger={setshowRisiko}
+
+                    />               
+                </div>
+
+
+            </div>
+
+            <Mobile_Footer/>
+        </div>
+        
             
       </div>
   
